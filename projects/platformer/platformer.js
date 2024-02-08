@@ -30,6 +30,7 @@ $(function () {
     createCollectable("steve", 1050, 300);
     createCollectable("kennedi", 300, 200);
     createCollectable("max", 550, 200);
+    createCannon("top", 450, 500)
     createCannon("left", 660, 0.001);
     createCannon("right", 230, 1000);
     /**
