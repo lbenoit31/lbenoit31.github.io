@@ -25,6 +25,7 @@ $(function () {
     createPlatform(600, 500, 150, 15);
     createPlatform(800, 700, 150, 15);
     createPlatform(1050, 500, 50, 1500);
+    createPlatform(1250, 365, 150, 2500);
     createCollectable("grace", 700, 300);
     createCollectable("steve", 1050, 300);
     createCollectable("kennedi", 300, 200);
