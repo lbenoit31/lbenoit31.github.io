@@ -34,27 +34,7 @@
 
         //////////////////////////////////////////////////////////////////
         /////////////////// SETUP DO NOT DELETE //////////////////////////
-        // When you first create the Variable...
-        var positionX = 0;
-
-        // during update...
-        // Frame 1
-        positionX = 0 + 10; // positionX = 10
-        moveBoxTo(positionX);
-
-        // Frame 2
-        positionX = 10 + 10; // positionX = 20
-        moveBoxTo(positionX);
-
-        // Frame 3
-        positionX = 20 + 10; // positionX = 30
-        moveBoxTo(positionX);
-
-        // Frame 4
-        positionX = 30 + 10; // positionX = 40
-        moveBoxTo(positionX);
-
-        // so on...        //////////////////////////////////////////////////////////////////
+        // When you first create the Variable... //////////////////////////////////////////////////////////////////
 
         var box = jQuery(".box"); // reference to the HTML .box element
         var board = jQuery(".board"); // reference to the HTML .board element
@@ -67,8 +47,9 @@
         box.on("click", handleBoxClick);
 
         // moves the Box to a new position on the screen along the X-Axis
-        function moveBoxTo(newPositionX) {
-          box.css("left", 200);
+        function 
+        moveBoxTo(newPositionX) {
+          box.css("left", newPositionX);
         }
 
         // changes the text displayed on the Box
@@ -82,6 +63,8 @@
 
         // TODO 2 - Variable declarations
         var positionX = 10;
+        var points = 0;
+        var speed = 10;
         /*
         This Function will be called 20 times/second. Each time it is called,
         it should move the Box to a new location. If the box drifts off the screen
@@ -89,7 +72,7 @@
         */
         function update() {
           /* Your Code to Increase positionX by 10 HERE */
-          positionX = positionX + 10;
+          positionX = positionX + speed;
           moveBoxTo(positionX);
         } /*
         This Function will be called each time the box is clicked. Each time it is called,
@@ -99,6 +82,7 @@
         function handleBoxClick() {
           positionX = 0;
           points = points + 1;
+          speed = speed + 3;
           changeBoxText(points);
         }
       })();
